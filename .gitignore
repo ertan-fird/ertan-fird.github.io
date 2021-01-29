@@ -1,1 +1,4 @@
-/tools/package-json.json
+tools/package-lock.json
+tools/node_modules
+tools/gulpfile.js
+tools/package.json
