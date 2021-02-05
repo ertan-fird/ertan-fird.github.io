@@ -1,12 +1,238 @@
-<!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap')
+//NULLSTYLE
+* 
+	padding: 0
+	margin: 0
+	border: 0
+
+*, *:before, *:after 
+	box-sizing: border-box
+
+*:focus, *:active 
+	outline: none
+
+a:focus, a:active 
+	outline: none
+
+nav, footer, header, aside 
+	display: block
+
+html, body 
+	height: 100%
+	width: 100%
+	font-size: 100%
+	line-height: 1
+	font-size: 14px
+	-ms-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+
+input, button, textarea 
+	font-family: inherit
+
+input::-ms-clear 
+	display: none
+
+button 
+	cursor: pointer
+	&::-moz-focus-inner 
+		padding: 0
+		border: 0
+	
+
+a, a:visited 
+	text-decoration: none
+
+a:hover 
+	text-decoration: none
+
+ul li 
+	list-style: none
+
+img 
+	vertical-align: top
+
+h1, h2, h3, h4, h5, h6 
+	font-size: inherit
+	font-weight: 400
+
+//BODY
+body
+	background: #000000
+	color: #ffffff
+	position: relative
+	font-family: 'PT Sans', sans-serif
+
+a, a:visited 
+	color: #969696
+
+.container
+	width: 1040px
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+//HEADER
+.header
+	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	color: #969696
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__top
+		position: relative
+		display: flex
+		width: 1040px
+		height: 44px
+		align-items: center
+		justify-content: space-between
+		padding: 14px 0 14px 0
+	&__info
+		font-size: 12px
+		display: flex
+		position: relative
+	&__infolink
+	&__infolink:first-child p
+		background: url("/images/phone.svg") no-repeat
+		background-size: content
+		padding: 1px 0 1px 28px
+	&__infolink:nth-child(2) p::before,&__infolink:nth-child(2) p::after
+		content: "|"
+		margin: 0 12px
+	&__infolink:first-child a::after
+		content: "/"
+		margin: 0 2px
+	&__infolink:first-child a
+		background: url("/images/log-in.svg") no-repeat
+		background-size: content
+		padding: 0px 0 0px 20px
+	&__center
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 80px
+		background: #0F0F0F;
+	&__protoitem
+		display: flex
+		align-items: center
+	&__item
+		text-decoration: uppercase
+		font-size: 14px;
+		line-height: 18px;
+		padding: 31px 20px 31px 20px
+#active
+	background: #1F1F1F
+	height: 80px
+	color: #ffffff
+
+//FIRST-SCREEN
+.first-screen
+	background: url("/images/main_1.png") no-repeat
+	background-size: cover
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&__logo
+		margin: 160px 0 0 0
+	&__title
+		color: #FFFFFF
+		font-size: 16px
+		line-height: 24px
+		width: 730px
+		height: 96px
+		text-align: center
+		text-transform: uppercase
+		margin: 80px 0 80px 0
+
+//SECOND-SCREEN
+.second-screen
+	position: relative
+	display: flex
+	width: 100%
+
+.new-season
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	width: 54%
+	margin: 80px 0 80px 0
+	&__title
+		font-family: Playfair Display
+		font-weight: 700
+		font-size: 36px
+		line-height: 48px
+		text-align: center
+		text-transform: uppercase
+		margin: 0 0 90px 0
+	&__title::after
+		content: ""
+		position: absolute
+		top: 30%
+		left: 22%
+		width: 140px
+		height: 1px
+		background: url("/images/Line.svg")
+	&__models
+		display: flex
+
+.model
+	font-family: Playfair Display
+	&__picture
+		width: 22vh
+		padding: 3.8vh 1.5vh 3.9vh 1.6vh
+		margin: 2.6vh
+		background: #191B1C
+	&__name
+		width: 140px
+		height: 24px
+		margin: 0 2.6vh 1.4vh 2.6vh
+		font-size: 18px
+		line-height: 24px
+	&__price
+		font-weight: 700
+		font-size: 16px
+		line-height: 21px
+		margin: 0 0 0 2.6vh
+		color: #D0D0D0
+
+.new-collection
+	width: 46%
+	background: url("/images/newcollection.png") no-repeat
+	background-size: content
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: center
+	padding: 90px 252px
+	&__title
+		font-family: Playfair Display
+		font-weight: 700
+		font-size: 36px
+		line-height: 48px
+		text-align: center
+		text-transform: uppercase
+	&__button
+		border: 1px solid #ffffff
+		background: none
+		color: #ffffff
+		font-family: PT Sans
+		font-size: 18px
+		line-height: 23px
+		text-align: center
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		margin: 2.4vh 0 0 0
+		padding: 1.3vh 2.2vh
+		position: static
+
+
