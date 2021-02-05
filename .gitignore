@@ -1,4 +1,5 @@
-tools/package-lock.json
-tools/node_modules
-tools/gulpfile.js
-tools/package.json
+package-lock.json
+node_modules
+gulpfile.js
+package.json
+linux-x64-64_binding.node
