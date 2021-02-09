@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap')
-//NULLSTYLE
+//NULLSTYLE==================================
 * 
 	padding: 0
 	margin: 0
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6
 	font-size: inherit
 	font-weight: 400
 
-//BODY
+//BODY==================================
 body
 	background: #000000
 	color: #ffffff
@@ -67,14 +67,20 @@ body
 a, a:visited 
 	color: #969696
 
+a:hover
+	text-decoration: underline
+
+a:hover::after
+	text-decoration: none
+
 .container
-	width: 1040px
+	width: 150vh
 	position: relative
 	display: flex
 	justify-content: space-between
 	align-items: center
 
-//HEADER
+//HEADER==================================
 .header
 	position: relative
 	top: 0
@@ -87,77 +93,93 @@ a, a:visited
 	&__top
 		position: relative
 		display: flex
-		width: 1040px
-		height: 44px
+		width: 150vh
+		height: 6vh
 		align-items: center
 		justify-content: space-between
-		padding: 14px 0 14px 0
 	&__info
-		font-size: 12px
+		font-size: 1.7vh
 		display: flex
 		position: relative
+	&__info:last-child
+		display: none
 	&__infolink
 	&__infolink:first-child p
 		background: url("/images/phone.svg") no-repeat
-		background-size: content
-		padding: 1px 0 1px 28px
+		background-size: 10%
+		background-position: 6% 50%
+		text-align: center
+		padding: 0.2vh 0 0.2vh 4vh
 	&__infolink:nth-child(2) p::before,&__infolink:nth-child(2) p::after
 		content: "|"
-		margin: 0 12px
+		margin: 0 2vh
 	&__infolink:first-child a::after
 		content: "/"
-		margin: 0 2px
+		display: inline-block
+		margin: 0 0.8vh
+		text-decoration: none
 	&__infolink:first-child a
 		background: url("/images/log-in.svg") no-repeat
-		background-size: content
-		padding: 0px 0 0px 20px
+		background-size: 18%
+		background-position: 8% 50%
+		padding: 0 0 0 4vh
 	&__center
 		display: flex
 		justify-content: center
 		align-items: center
 		width: 100%
-		height: 80px
+		height: 10vh
 		background: #0F0F0F;
+	&__logo
+		width: 18vh
 	&__protoitem
 		display: flex
 		align-items: center
+		position: relative
 	&__item
+		display: flex
+		align-items: center
 		text-decoration: uppercase
-		font-size: 14px;
-		line-height: 18px;
-		padding: 31px 20px 31px 20px
-#active
-	background: #1F1F1F
-	height: 80px
-	color: #ffffff
+		font-size: 1.9vh
+		line-height: 2.2vh
+		padding: 2vh
+		height: 10vh
+		cursor: pointer
+	&__item:hover
+		background: #1F1F1F
+		color: #ffffff
+	&__picture
+		width: 3vh
+.login:hover::after
+	text-decoration: none
 
-//FIRST-SCREEN
+//FIRST-SCREEN==================================
 .first-screen
 	background: url("/images/main_1.png") no-repeat
-	background-size: cover
+	background-size: auto 100%
+	background-position: center
 	width: 100%
-	height: 100%
+	height: 90vh
 	display: flex
 	flex-direction: column
 	align-items: center
-	justify-content: center
+	justify-content: space-around
 	&__logo
-		margin: 160px 0 0 0
+		width: 38vh
 	&__title
 		color: #FFFFFF
-		font-size: 16px
-		line-height: 24px
-		width: 730px
-		height: 96px
+		font-size: 2.4vh
+		line-height: 3.4vh
+		width: 110vh
 		text-align: center
 		text-transform: uppercase
-		margin: 80px 0 80px 0
 
-//SECOND-SCREEN
+//SECOND-SCREEN==================================
 .second-screen
 	position: relative
 	display: flex
 	width: 100%
+	flex-wrap: wrap
 
 .new-season
 	display: flex
@@ -165,25 +187,27 @@ a, a:visited
 	justify-content: space-around
 	align-items: center
 	width: 54%
-	margin: 80px 0 80px 0
+	padding: 10vh 0
 	&__title
 		font-family: Playfair Display
 		font-weight: 700
-		font-size: 36px
-		line-height: 48px
+		font-size: 4.8vh
+		line-height: 6vh
 		text-align: center
 		text-transform: uppercase
-		margin: 0 0 90px 0
+		position: relative
 	&__title::after
 		content: ""
 		position: absolute
-		top: 30%
-		left: 22%
-		width: 140px
-		height: 1px
+		top: 12vh
+		left: 50%
+		transform: translate(-50%)
+		width: 18vh
+		height: 0.2vh
 		background: url("/images/Line.svg")
 	&__models
 		display: flex
+		margin: 9vh 0 0 0
 
 .model
 	font-family: Playfair Display
@@ -192,47 +216,479 @@ a, a:visited
 		padding: 3.8vh 1.5vh 3.9vh 1.6vh
 		margin: 2.6vh
 		background: #191B1C
+		transition: all ease 0.2s
+	&__picture:hover
+		padding: 3.3vh 1vh 3.4vh 1.1vh
 	&__name
-		width: 140px
-		height: 24px
+		width: 24vh
+		height: 3.8vh
 		margin: 0 2.6vh 1.4vh 2.6vh
-		font-size: 18px
-		line-height: 24px
+		font-size: 2.4vh
+		line-height: 3.6vh
 	&__price
 		font-weight: 700
-		font-size: 16px
+		font-size: 1.9vh
 		line-height: 21px
 		margin: 0 0 0 2.6vh
 		color: #D0D0D0
+.model:hover
+	text-decoration: underline
+	cursor: pointer
 
 .new-collection
 	width: 46%
 	background: url("/images/newcollection.png") no-repeat
-	background-size: content
+	background-size: auto 100%
+	background-position: center
 	display: flex
 	flex-direction: column
 	justify-content: flex-end
 	align-items: center
-	padding: 90px 252px
+	padding: 10vh
 	&__title
 		font-family: Playfair Display
 		font-weight: 700
-		font-size: 36px
-		line-height: 48px
+		font-size: 4.8vh
+		line-height: 6vh
 		text-align: center
 		text-transform: uppercase
+		position: relative
+	&__title::after
+		content: ""
+		position: absolute
+		top: 10vh
+		left: 50%
+		transform: translate(-50%)
+		width: 18vh
+		height: 0.2vh
+		background: url("/images/Line.svg")
 	&__button
-		border: 1px solid #ffffff
+		border: 0.2vh solid #ffffff
 		background: none
 		color: #ffffff
 		font-family: PT Sans
-		font-size: 18px
-		line-height: 23px
+		font-size: 1.9vh
+		line-height: 2.2vh
 		text-align: center
 		letter-spacing: 0.1em
 		text-transform: uppercase
-		margin: 2.4vh 0 0 0
+		margin: 8vh 0 0 0
 		padding: 1.3vh 2.2vh
 		position: static
+		transition: all ease 0.3s
+	&__button:hover
+		padding: 1.5vh 2.4vh
+		font-size: 2.1vh
 
+.collection-2018
+	display: flex
+	height: 70vh
+	&__picture
+		background: url("/images/Coll2018.png") no-repeat
+		background-size: auto 100%
+		background-position: left
+		width: 46%
+		left: 0
+	&__text
+		width: 54%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-around
+		padding: 10vh 22vh
+		right: 0
+	&__title
+		font-family: Playfair Display
+		font-weight: 700
+		font-size: 4.8vh
+		line-height: 6vh
+		text-align: center
+		text-transform: uppercase
+		position: relative
+	&__title::after
+		content: ""
+		position: absolute
+		top: 10vh
+		left: 50%
+		transform: translate(-50%)
+		width: 18vh
+		height: 0.2vh
+		background: url("/images/Line.svg")
+	&__description
+		font-size: 1.9vh
+		line-height: 150%
+		text-align: center
+		color: #FFFFFF
+		margin: 8vh 0 0 0
+	&__button
+		border: 0.2vh solid #ffffff
+		background: none
+		color: #ffffff
+		font-family: PT Sans
+		font-size: 1.9vh
+		line-height: 2.2vh
+		text-align: center
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		margin: 8vh 0 0 0
+		padding: 1.3vh 2.2vh
+		cursor: pointer
+		transition: all ease 0.3s
+	&__button:hover
+		padding: 1.5vh 2.4vh
+		font-size: 2.1vh
 
+//NEW_GOODS==================================
+.new-goods
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	height: 107vh
+	padding: 2vh 0 2vh 0
+	&__title
+		font-family: Playfair Display
+		font-weight: 700
+		font-size: 4.8vh
+		line-height: 6vh
+		text-align: center
+		text-transform: uppercase
+		position: relative
+		margin: 0 0 3vh 0
+	&__title::after
+		content: ""
+		position: absolute
+		top: 10vh
+		left: 50%
+		transform: translate(-50%)
+		width: 18vh
+		height: 0.2vh
+		background: url("/images/Line.svg")
+	&__models
+		display: flex
+
+//OUR-BRANDS==================================
+.our-brands
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	background: #0F0F0F;
+	padding: 4vh 0 4vh 0
+	&__title
+		font-family: Playfair Display
+		font-weight: 700
+		font-size: 4.8vh
+		line-height: 6vh
+		text-align: center
+		text-transform: uppercase
+		position: relative
+		margin: 0 0 3vh 0
+	&__title::after
+		content: ""
+		position: absolute
+		top: 10vh
+		left: 50%
+		transform: translate(-50%)
+		width: 18vh
+		height: 0.2vh
+		background: url("/images/Line.svg")
+	&__field
+		margin: 3vh 0 0 0
+	&__brand
+		margin: 0 2vh
+		width: 28vh
+
+//FOOTER==================================
+.footer
+	display: flex
+	align-items: start
+	justify-content: space-around
+	padding: 10vh 28vh 14vh 28vh
+	background: url("/images/footer.png") no-repeat
+	background-size: cover
+	&__title
+		font-family: Playfair Display
+		font-size: 3.2vh
+		line-height: 3.8vh
+		margin: 0 0 6vh 0
+		text-transform: uppercase
+	&__text
+		font-family: PT Sans
+		line-height: 150%
+		font-size: 1.9vh
+		max-width: 40vh
+	&__field
+		display: flex
+		flex-wrap: wrap
+		align-items: start
+		justify-content: space-between
+		max-width: 32vh
+		margin: 0 1vh 0 0
+	&__button
+		font-family: PT Sans
+		font-size: 1.9vh
+		padding: 1.6vh 1.8vh
+		color: #D0D0D0
+		background: #0F0F0F;
+		margin: 0 0 2vh 0
+	&__button:hover
+		text-decoration: underline
+	&__mail
+		display: flex
+		margin: 6vh 0
+	&__textarea
+		background: rgba(255, 255, 255, 0.4)
+		font-size: 1.9vh
+		color: #B6B6B6
+		padding: 0 2vh
+		height: 5.6vh
+	&__textarea::placeholder
+		color: #B6B6B6
+	&__subscribe
+		text-transform: uppercase
+
+//LAST-LINE==================================
+.last-line
+	display: flex
+	justify-content: space-around
+	align-items: center
+	padding: 1.8vh 0
+	height: 6vh
+	&__text
+		color: #D0D0D0
+		font-family: "PT Sans"
+		font-size: 1.7vh
+
+//MOBILE==================================
+@media ( max-width: 1025px )
+	.header
+		&__top
+			width: 100%
+			height: 6vh
+		&__info
+			font-size: 1.7vh
+		&__info:first-child
+			display: none
+		&__info:last-child
+			display: block
+		&__burger
+			height: 0.2vh
+			width: 3vh
+			background: #B6B6B6
+			position: relative
+			margin: 0 2vh
+			transition: all 0.2s ease 0s
+		&__burger::after
+			content: ""
+			height: 0.2vh
+			width: 3vh
+			background: #B6B6B6
+			position: absolute
+			top: -1vh
+			transition: all 0.3s ease 0s
+		&__burger::before
+			content: ""
+			height: 0.2vh
+			width: 3vh
+			background: #B6B6B6
+			position: absolute
+			top: 1vh
+			transition: all 0.3s ease 0s
+		&__infolink
+		&__infolink:first-child p
+			background: url("/images/phone.svg") no-repeat
+			background-size: 10%
+			background-position: 6% 50%
+			text-align: center
+			padding: 0.2vh 0 0.2vh 4vh
+		&__infolink:nth-child(2) p::before,&__infolink:nth-child(2) p::after
+			content: "|"
+			margin: 0 2vh
+		&__infolink:first-child a::after
+			content: "/"
+			display: inline-block
+			margin: 0 0.8vh
+			text-decoration: none
+		&__infolink:first-child a
+			background: url("/images/log-in.svg") no-repeat
+			background-size: 18%
+			background-position: 8% 50%
+			padding: 0 0 0 4vh
+		&__center
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 10vh
+			background: #0F0F0F;
+		&__logo
+			width: 18vh
+			margin: 0 0 0 2vh
+		&__protoitem
+			display: flex
+			align-items: center
+			position: relative
+		&__item
+			display: flex
+			align-items: center
+			text-decoration: uppercase
+			font-size: 1.9vh
+			line-height: 2.2vh
+			padding: 2vh
+			height: 10vh
+			cursor: pointer
+		&__item:hover
+			background: #1F1F1F
+			color: #ffffff
+		&__picture
+			width: 3vh
+	.screen
+		display: none
+	.active
+		background: rgba(0, 0, 0, 0)
+	.active::after
+		transform: rotate(-45deg)
+		top: 0
+	.active::before
+		transform: rotate(45deg)
+		top: 0
+	.lock
+		overflow: hidden
+
+	.first-screen
+		height: 100vh
+		display: flex
+		&__logo
+			width: 28vh
+		&__title
+			color: #FFFFFF
+			font-size: 1.4vh
+			line-height: 150%
+			width: 90%
+
+	//SECOND-SCREEN==================================
+	.second-screen
+		position: relative
+		display: flex
+		width: 100%
+		flex-wrap: wrap
+
+	.new-season
+		width: 100%
+		&__title
+			font-size: 2.8vh
+			line-height: 150%
+		&__title::after
+			top: 6vh
+			width: 10vh
+		&__models
+			flex-direction: column
+			justify-content: center
+			margin: 4vh 0 0 0
+
+	.model
+		max-width: 40vh
+		&__picture
+			width: 22vh
+			padding: 3.8vh 1.5vh 3.9vh 1.6vh
+			margin: 0.6vh
+		&__picture:hover
+			padding: 3.3vh 1vh 3.4vh 1.1vh
+		&__name
+			width: 100%
+			margin: 0 0.6vh 1.4vh 0.6vh
+		&__price
+			font-size: 1.9vh
+			line-height: 150%
+			margin: 0 0 2vh 0.6vh
+
+	.new-collection
+		width: 100%
+		background: url("/images/newcollection.png") no-repeat
+		background-size: 100% auto
+		background-position: center
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: center
+		padding: 10vh 0
+		&__title
+			font-size: 2.8vh
+			line-height: 150%
+		&__title::after
+			top: 6vh
+			width: 10vh
+
+	.collection-2018
+		width: 100%
+		&__picture
+			width: 100%
+			position: absolute
+		&__text
+			position: absolute
+			width: 100%
+			padding: 10vh
+			z-index: 2
+		&__title
+			font-size: 2.8vh
+			line-height: 150%
+		&__title::after
+			top: 6vh
+			width: 10vh
+		&__description
+			font-size: 1.4vh
+			margin: 8vh 0 0 0
+
+	//NEW_GOODS==================================
+	.new-goods
+		height: auto
+		width: 100%
+		padding: 0 0 2vh 0
+		&__title
+			font-size: 2.8vh
+			line-height: 150%
+			width: 100%
+		&__title::after
+			top: 6vh
+			width: 10vh
+		&__models
+			width: 70%
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+
+	//OUR-BRANDS==================================
+	.our-brands
+		&__title
+			font-size: 2.8vh
+			line-height: 150%
+		&__title::after
+			top: 6vh
+			width: 10vh
+		&__field
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		&__brand
+			margin: 0 2vh
+			width: 28vh
+
+	//FOOTER==================================
+	.footer
+		background-size: auto 100%
+		background-position: right
+		display: flex
+		flex-direction: column
+		padding: 2vh
+		&__title
+			font-size: 1.8vh
+			line-height: 150%
+			margin: 1vh 0
+		&__text
+			font-size: 1.2vh
+		&__field
+			margin: 2vh 0 0 0
+		&__mail
+			display: flex
+			margin: 3vh 0
