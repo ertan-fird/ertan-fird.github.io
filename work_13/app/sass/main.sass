@@ -103,6 +103,8 @@ a:hover::after
 		position: relative
 	&__info:last-child
 		display: none
+	&__burger
+		display: none
 	&__infolink
 	&__infolink:first-child p
 		background: url("/images/phone.svg") no-repeat
@@ -129,7 +131,7 @@ a:hover::after
 		align-items: center
 		width: 100%
 		height: 10vh
-		background: #0F0F0F;
+		background: #0F0F0F
 	&__logo
 		width: 18vh
 	&__protoitem
@@ -150,6 +152,30 @@ a:hover::after
 		color: #ffffff
 	&__picture
 		width: 3vh
+	&__menu
+		display: none
+		position: fixed
+		z-index: 3
+		top: 6vh
+		left: 100vw
+		width: 100vw
+		height: 94vh
+		display: flex
+		flex-direction: column
+		background: #0F0F0F
+		transition: all 0.6s ease 0s
+	&__bottom
+		bottom: 0
+		display: flex
+		font-size: 1.7vh
+		background: #000
+		position: absolute
+		height: 6vh
+		width: 100%
+		align-items: center
+.menu-active
+	left: 0
+	background: #0F0F0F
 .login:hover::after
 	text-decoration: none
 
@@ -462,10 +488,16 @@ a:hover::after
 
 //MOBILE==================================
 @media ( max-width: 1025px )
+	body
+		padding: 6vh 0 0 0
 	.header
 		&__top
 			width: 100%
 			height: 6vh
+			top: 0
+			position: fixed
+			background: #000000
+			z-index: 3
 		&__info
 			font-size: 1.7vh
 		&__info:first-child
@@ -473,6 +505,7 @@ a:hover::after
 		&__info:last-child
 			display: block
 		&__burger
+			display: block
 			height: 0.2vh
 			width: 3vh
 			background: #B6B6B6
@@ -521,7 +554,7 @@ a:hover::after
 			align-items: center
 			width: 100%
 			height: 10vh
-			background: #0F0F0F;
+			background: #0F0F0F
 		&__logo
 			width: 18vh
 			margin: 0 0 0 2vh
@@ -555,8 +588,11 @@ a:hover::after
 		top: 0
 	.lock
 		overflow: hidden
+	.mobile-item
+		width: 100vw
 
 	.first-screen
+		top: 16vh
 		height: 100vh
 		display: flex
 		&__logo
@@ -579,6 +615,7 @@ a:hover::after
 		&__title
 			font-size: 2.8vh
 			line-height: 150%
+			margin: 0 0 4vh 0
 		&__title::after
 			top: 6vh
 			width: 10vh
@@ -605,7 +642,6 @@ a:hover::after
 
 	.new-collection
 		width: 100%
-		background: url("/images/newcollection.png") no-repeat
 		background-size: 100% auto
 		background-position: center
 		display: flex
@@ -622,13 +658,15 @@ a:hover::after
 
 	.collection-2018
 		width: 100%
+		position: relative
 		&__picture
 			width: 100%
+			height: 100%
 			position: absolute
 		&__text
 			position: absolute
 			width: 100%
-			padding: 10vh
+			padding: 10vh 4vh
 			z-index: 2
 		&__title
 			font-size: 2.8vh
@@ -644,11 +682,12 @@ a:hover::after
 	.new-goods
 		height: auto
 		width: 100%
-		padding: 0 0 2vh 0
+		padding: 2vh 0
 		&__title
 			font-size: 2.8vh
 			line-height: 150%
 			width: 100%
+			margin: 4vh 0 6vh 0
 		&__title::after
 			top: 6vh
 			width: 10vh
