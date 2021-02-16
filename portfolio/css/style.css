@@ -110,7 +110,7 @@ a:hover {
 
 .anchor{
 	position: relative;
-	z-index: 2;
+	z-index: 4;
 }
 
 .section-1{
@@ -118,6 +118,7 @@ a:hover {
 	height: 100%;
 	background: none;
 	position: relative;
+	overflow: hidden;
 }
 
 .section-1__header{
@@ -365,10 +366,14 @@ a:hover {
 	background-size: cover;
 }
 .item-2{
-	background: url('../img/screen-14.png') no-repeat center center;
+	background: url('../img/screen-13.png') no-repeat center center;
 	background-size: cover;
 }
 .item-3{
+	background: url('../img/screen-14.png') no-repeat center center;
+	background-size: cover;
+}
+.item-4{
 	background: url('../img/screen-15.png') no-repeat center center;
 	background-size: cover;
 }
@@ -473,6 +478,10 @@ iframe{
 .section-4__contact{
 	display: flex;
 	margin: 2vh;
+	justify-content: start;
+	position: relative;
+	width: 30vh;
+	transform: translate(-20%)
 }
 
 .contact{
@@ -480,6 +489,7 @@ iframe{
 	white-space: nowrap;
 	font-size: 3vh;
 	text-align: center;
+	width: 100%;
 }
 
 .icon{
