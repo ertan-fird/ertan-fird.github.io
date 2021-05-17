@@ -1,3 +1,7 @@
-# ertan-fird.github.io
+Hello! Welcome to my GitHub-pages.<br>
 
-This is repository with my web-sites
+Portfolio
+====
+This is my portfolio with all my projects
+
+https://ertan-fird.github.io/portfolio
